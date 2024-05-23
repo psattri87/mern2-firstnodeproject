@@ -1,5 +1,5 @@
 const { data } = require("../db/users.json");
-const { getQueryErrors } = require("../validators/user.validators");
+// const { getQueryErrors } = require("../validators/user.validators");
 
 const getAllUsers = (req, res) => {
   res.json(data);
@@ -18,10 +18,10 @@ const getUserById = (req, res) => {
 const searchUsersByQuery = (req, res) => {
   let { gender, age } = req.query;
 
-  const error = getQueryErrors({ age, gender });
-  if (error) {
-    return res.status(422).json(error);
-  }
+  // const error = getQueryErrors({ age, gender });
+  // if (error) {
+  //   return res.status(422).json(error);
+  // }
 
   let result;
   if (gender && age) {
