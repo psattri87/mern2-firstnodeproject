@@ -2,6 +2,7 @@ const { data } = require("../db/users.json");
 // const { getQueryErrors } = require("../validators/user.validators");
 
 const getAllUsers = (req, res) => {
+  
   res.json(data);
 };
 
